@@ -14,10 +14,10 @@ class RendezVousType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('date', DateTimeType::class, [
+            ->add('start', DateTimeType::class, [
                 'date_widget' => 'single_text'
             ])
-            ->add('dateEnd', DateTimeType::class, [
+            ->add('end', DateTimeType::class, [
                 'date_widget' => 'single_text'
             ])
             ->add('commercial')

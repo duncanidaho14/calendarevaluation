@@ -13,7 +13,7 @@
 {% block body %}
     <div class="row">
         <div class="container">
-            <h1>Calendar</h1>
+            <h1>calendrier</h1>
             <pre>
                 {{ dump(data) }}
             </pre>
@@ -33,6 +33,11 @@
         initialView: 'timeGridWeek',
         locale : 'fr',
         timeZone : 'Europe/Paris',
+        headerToolbar : {
+            start: 'prev, next, today',
+            center: 'title',
+            end: 'dayGridMonth, timeGridWeek'
+        },
         events: {{data|raw}}
       });
       calendar.render();
