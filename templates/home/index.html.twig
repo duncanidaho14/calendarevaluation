@@ -17,6 +17,15 @@
             <pre>
                 {{ dump(data) }}
             </pre>
+            <pre>
+                {{ dump(commercial) }}
+            </pre>
+            <pre>
+                {{ dump(user) }}
+            </pre>
+            <pre>
+                {{ dump(push) }}
+            </pre>
             <div id="calendar"></div>
         </div>
     </div>
@@ -33,7 +42,12 @@
         initialView: 'timeGridWeek',
         locale : 'fr',
         timeZone : 'Europe/Paris',
-        events: {{data|raw}}
+        headerToolbar : {
+            start: 'prev, next, today',
+            center: 'title',
+            end: 'dayGridMonth, timeGridWeek'
+        },
+        events: {{push|raw}}
       });
       calendar.render();
     });

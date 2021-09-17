@@ -25,12 +25,12 @@ class RendezVous
     /**
      * @ORM\Column(type="datetime")
      */
-    private $date;
+    private $start;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $dateEnd;
+    private $end;
 
     /**
      * @ORM\ManyToOne(targetEntity=Commercial::class, inversedBy="rendezVouses")
@@ -61,26 +61,26 @@ class RendezVous
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getStart(): ?\DateTimeInterface
     {
-        return $this->date;
+        return $this->start;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setStart(\DateTimeInterface $start): self
     {
-        $this->date = $date;
+        $this->start = $start;
 
         return $this;
     }
 
-    public function getDateEnd(): ?\DateTimeInterface
+    public function getEnd(): ?\DateTimeInterface
     {
-        return $this->dateEnd;
+        return $this->end;
     }
 
-    public function setDateEnd(\DateTimeInterface $dateEnd): self
+    public function setEnd(\DateTimeInterface $end): self
     {
-        $this->dateEnd = $dateEnd;
+        $this->end = $end;
 
         return $this;
     }

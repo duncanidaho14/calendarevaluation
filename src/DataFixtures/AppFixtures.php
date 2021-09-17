@@ -76,8 +76,8 @@ class AppFixtures extends Fixture
         
         $rdv = new RendezVous();
         $rdv->setName('crampons')
-            ->setDate((new DateTime('now')))
-            ->setDateEnd((new DateTime('+3 hours')))
+            ->setStart((new DateTime('now')))
+            ->setEnd((new DateTime('+3 hours')))
             ->setCommercial($commercial)
             ->setUser($user2)
         ;
@@ -86,8 +86,8 @@ class AppFixtures extends Fixture
 
         $rdv2 = new RendezVous();
         $rdv2->setName('tibias')
-            ->setDate((new DateTime('tomorrow')))
-            ->setDateEnd((new Datetime('tomorrow +3 hours')))
+            ->setStart((new DateTime('tomorrow')))
+            ->setEnd((new Datetime('tomorrow +3 hours')))
             ->setCommercial($commercial2)
             ->setUser($user)
         ;
@@ -95,8 +95,8 @@ class AppFixtures extends Fixture
 
         $rdv3 = new RendezVous();
         $rdv3->setName('genoux')
-            ->setDate((new DateTime('now')))
-            ->setDateEnd((new Datetime('+5 hours')))
+            ->setStart((new DateTime('now')))
+            ->setEnd((new Datetime('+5 hours')))
             ->setCommercial($commercial3)
             ->setUser($user)
         ;
