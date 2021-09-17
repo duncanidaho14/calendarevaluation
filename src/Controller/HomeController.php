@@ -32,7 +32,9 @@ class HomeController extends AbstractController
                 'id' => $event->getId(),
                 'title' => $event->getName(),
                 'start'  => $event->getStart()->format('Y-m-d H:i:s'),
-                'end' => $event->getEnd()->format('Y-m-d H:i:s')
+                'end' => $event->getEnd()->format('Y-m-d H:i:s'),
+                'classNames' => [$event->getCommercial(), $event->getUser()],
+                // 'user' => $event->getUser($this->getUser())
             ];
             foreach ($comm as $com) {
                 $rdvCom[] = [
@@ -69,7 +71,8 @@ class HomeController extends AbstractController
             'data' => $data,
             'commercial' => $rdvCom,
             'user' => $rdvUser,
-            'push' => $push
+            'push' => $push,
+            'userr' => $userRepository->findAll()
         ]);
     }
 }

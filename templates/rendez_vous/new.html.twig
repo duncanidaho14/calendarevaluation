@@ -3,9 +3,13 @@
 {% block title %}New RendezVous{% endblock %}
 
 {% block body %}
-    <h1>Create new RendezVous</h1>
+    <div class="row">
+        <div class="container">
+            <h1>Create new RendezVous</h1>
 
-    {{ include('rendez_vous/_form.html.twig') }}
+            {{ include('rendez_vous/_form.html.twig') }}
 
-    <a href="{{ path('rendez_vous_index') }}">back to list</a>
+            <a href="{{ path('rendez_vous_index') }}">back to list</a>
+        </div>
+    </div>
 {% endblock %}
